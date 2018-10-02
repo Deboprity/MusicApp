@@ -10,7 +10,13 @@
     <ListView
         android:id="@+id/song_list"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
     </ListView>
+
+    <TextView
+        android:id="@+id/empty_music_list"
+        style="@style/text_view"
+        tools:text="@string/permission_not_granted"
+        android:visibility="gone"/>
 
 </LinearLayout>

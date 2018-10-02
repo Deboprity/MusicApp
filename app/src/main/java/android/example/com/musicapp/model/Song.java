@@ -2,7 +2,7 @@ package android.example.com.musicapp.model;
 
 public class Song {
 
-    long id;
+    private long id;
     private String title;
     private String artist;
 
@@ -16,10 +16,6 @@ public class Song {
         return id;
     }
 
-    public void setID(long id) {
-        this.id = id;
-    }
-
     public String getTitle() {
         return title;
     }
@@ -30,9 +26,5 @@ public class Song {
 
     public String getArtist() {
         return artist;
-    }
-
-    public void setArtist(String artist) {
-        this.artist = artist;
     }
 }

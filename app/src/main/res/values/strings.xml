@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Music App</string>
+    <string name="alert_permission_header">Permission necessary</string>
+    <string name="alert_permission_text">permission is necessary</string>
+    <string name="permission_not_granted">Permission not granted</string>
+    <string name="no_music">No Audio file found</string>
 </resources>
