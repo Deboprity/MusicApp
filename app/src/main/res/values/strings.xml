@@ -4,4 +4,5 @@
     <string name="alert_permission_text">permission is necessary</string>
     <string name="permission_not_granted">Permission not granted</string>
     <string name="no_music">No Audio file found</string>
+    <string name="img_desc_song">The image of the song</string>
 </resources>
