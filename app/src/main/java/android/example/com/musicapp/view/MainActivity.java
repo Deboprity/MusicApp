@@ -73,12 +73,16 @@ public class MainActivity extends AppCompatActivity implements MediaPlayerContro
 
     public void songPicked(View view){
         musicSrv.setSong(Integer.parseInt(view.getTag().toString()));
-        musicSrv.playSong();
+        String songTitle = musicSrv.playSong();
         if(playbackPaused){
             setController();
             playbackPaused=false;
         }
         controller.show(0);
+        Intent songIntent = new Intent(this, SongActivity.class);
+        songIntent.putExtra(getString(R.string.song_title), songTitle);
+        startActivity(songIntent);
+
     }
 
     //connect to the service

@@ -114,7 +114,7 @@ public class MusicService extends Service implements MediaPlayer.OnPreparedListe
         startForeground(NOTIFY_ID, not);
     }
 
-    public void playSong(){
+    public String playSong(){
         //play a song
         player.reset();
 
@@ -135,6 +135,7 @@ public class MusicService extends Service implements MediaPlayer.OnPreparedListe
             Log.e("MUSIC SERVICE", "Error setting data source", e);
         }
         player.prepareAsync();
+        return  songTitle;
     }
 
     public int getPosn(){
