@@ -28,6 +28,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.MediaController.MediaPlayerControl;
 import android.widget.TextView;
@@ -246,6 +247,14 @@ public class MainActivity extends AppCompatActivity implements MediaPlayerContro
 
         SongAdapter songAdt = new SongAdapter(this, songList);
         songListView.setAdapter(songAdt);
+
+        songListView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.d(TAG, "onItemClick: Clicked on the list item");
+                songPicked(view);
+            }
+        });
 
         setController();
     }
